@@ -1,6 +1,6 @@
 const aboutContent = () => {
   let aboutContainer = document.createElement("div");
-  aboutContainer.classList.add("home-container");
+  aboutContainer.classList.add("about-container");
 
   let copyDiv = document.createElement("div");
   copyDiv.classList.add("copy");

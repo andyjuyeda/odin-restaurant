@@ -2,11 +2,10 @@ import "./style.css";
 import menuContent from "./menu";
 import aboutContent from "./about";
 import contactContent from "./contact";
-
-console.log("Working!");
+import homeContent from "./home";
 
 const contentDiv = document.querySelector("#content");
-contentDiv.appendChild(aboutContent());
+contentDiv.appendChild(homeContent());
 
 let menuButton = document.querySelector(".nav-btn.menu");
 menuButton.addEventListener("click", () => {
@@ -18,6 +17,12 @@ let aboutButton = document.querySelector(".nav-btn.about");
 aboutButton.addEventListener("click", () => {
   contentDiv.innerHTML = "";
   contentDiv.appendChild(aboutContent());
+});
+
+let homeButton = document.querySelector(".nav-btn.home");
+homeButton.addEventListener("click", () => {
+  contentDiv.innerHTML = "";
+  contentDiv.appendChild(homeContent());
 });
 
 let contactButton = document.querySelector(".nav-btn.contact");
