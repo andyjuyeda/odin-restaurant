@@ -1,9 +1,26 @@
 const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: "./src/index.js",
+  mode: "development",
+  entry: {
+    index: "./src/index.js",
+    menu: "./src/menu.js",
+    about: "./src/about.js",
+    contact: "./src/contact.js",
+  },
+  devtool: "inline-source-map",
+  devServer: {
+    static: "./dist",
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: "Kyoto Pearl",
+      template: "./src/index.html",
+    }),
+  ],
   output: {
-    filename: "main.js",
+    filename: "[name].bundle.js",
     path: path.resolve(__dirname, "dist"),
   },
   module: {

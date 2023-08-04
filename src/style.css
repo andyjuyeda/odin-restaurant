@@ -1,12 +1,33 @@
+:root {
+    --header-height: 100px;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-nav ul {
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+div.nav {
+    height: var(--header-height);
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+}
+
+nav {
+    display: grid;
+    place-self: center;
+}
+
+nav ul {
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+    place-items: center;
+    width: min(90vw, 1000px);
 }
 
 nav li {
@@ -14,12 +35,33 @@ nav li {
 }
 
 nav li:first-child {
-    grid-column: 1 /2 ;
+    grid-column: 1 /2;
 }
+
 nav li:nth-child(2) {
     grid-column: 2 / 3;
 }
-nav li:last-child {
+
+nav li:nth-child(3) {
     grid-column: 3 / 4;
 }
 
+nav li:nth-child(4) {
+    grid-column: 4 / 5;
+}
+
+nav li:last-child {
+    grid-column: -1 / -2;
+}
+
+.home-container {
+    display: grid;
+}
+
+.home-container .copy {
+    justify-self: center;
+    width: min(1000px, 90vw);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
