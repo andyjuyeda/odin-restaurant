@@ -18,13 +18,9 @@ const homeContent = () => {
   landscapeDiv2.classList.add("landscape2");
   heroContainer.appendChild(landscapeDiv2);
 
-  let heroTextDiv = document.createElement("div");
-  heroTextDiv.classList.add("hero-text-div");
-  let heroText = document.createElement("h1");
-  heroText.textContent = "Kyoto Pearl";
-  heroText.classList.add("hero-text");
-  heroTextDiv.appendChild(heroText);
-  heroContainer.appendChild(heroTextDiv);
+  let heroCenterDiv = document.createElement("div");
+  heroCenterDiv.classList.add("hero-center");
+  heroContainer.appendChild(heroCenterDiv);
 
   return heroContainer;
 };

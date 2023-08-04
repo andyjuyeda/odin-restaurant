@@ -35,9 +35,9 @@ nav {
 nav ul {
     justify-self: center;
     display: grid;
-    grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1.3fr 1fr 1fr;
     place-items: center;
-    width: min(90vw, 1000px);
+    width: min(90vw, 800px);
 }
 
 nav li {
@@ -64,6 +64,19 @@ nav li:last-child {
     grid-column: -1 / -2;
 }
 
+nav button {
+    background-color: transparent;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.3rem;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
+
+nav li:nth-child(3) button {
+    font-size: 1.5rem;
+}
+
 .about-container {
     justify-self: center;
     display: grid;
@@ -80,26 +93,18 @@ nav li:last-child {
     justify-self: center;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 3fr 2fr 3fr;
+    grid-template-rows: 1fr 1fr 1fr;
     gap: 20px;
 }
 
-.hero-text-div {
+.hero-center {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     place-self: center;
     border-radius: 10px;
-    width: 100%;
-    height: 100%;
-    display: grid;
-    place-items: center;
-}
-
-.hero-text {
-    font-family: 'Poppins', sans-serif;
-    font-size: 4rem;
-    text-align: center;
-    color: var(--text-color);
+    width: 350px;
+    height: 250px;
+    background: url('./center.jpg');
 }
 
 .portrait1 {
@@ -126,16 +131,12 @@ nav li:last-child {
     background: url('./landscape2.jpg');
 }
 
-.portrait1,
-.portrait2 {
-    height: 500px;
-    width: auto;
-}
 
 .portrait1,
 .portrait2,
 .landscape1,
-.landscape2 {
+.landscape2,
+.hero-center {
     background-size: cover;
     background-position-y: 50%;
     border-radius: 10px;
