@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav li:first-child {
+    grid-column: 1 /2 ;
+}
+nav li:nth-child(2) {
+    grid-column: 2 / 3;
+}
+nav li:last-child {
+    grid-column: 3 / 4;
+}
+
